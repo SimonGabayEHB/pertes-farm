@@ -136,6 +136,10 @@ function render(list) {
             visibilityBtn.className = "visibility-toggle";
             visibilityBtn.setAttribute("aria-label", "Toggle visibility")
 
+            const trashBtn = document.createElement("button");
+            trashBtn.className = "trash-button";
+            trashBtn.setAttribute("aria-label", "delete product");
+
             if (product.visible) {
                 visibilityBtn.classList.add("on");
             }
@@ -147,7 +151,13 @@ function render(list) {
                 render(products);
             };
 
+            trashBtn.onclick = (e) => {
+                e.stopPropagation();
+                deleteProduct(product.id);
+            }
+
             productCard.appendChild(visibilityBtn);
+            productCard.appendChild(trashBtn);
         }
 
     }
