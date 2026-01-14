@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Patua One';
-    src: url('../fonts/PatuaOne-Regular.woff2') format('woff2'),
-        url('../fonts/PatuaOne-Regular.woff') format('woff');
+    src: url('/pertes-farm/fonts/PatuaOne-Regular.woff2') format('woff2'),
+        url('/pertes-farm/fonts/PatuaOne-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -397,3 +397,4 @@ header #mode-toggle-button span:last-child {
   background: #d8d7d7;
   transform: translateY(1px);
 }
+
