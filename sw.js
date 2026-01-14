@@ -5,15 +5,15 @@ const CACHE_NAME = "pertes-v1";
 
 // 2. List of files to cache
 const ASSETS = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/manifest.json",
-  "/products.json",
-  "/jsbarcode.min.js",
-  "/js/main.js",
-  "/images/icon-192.png",
-  "/images/icon-512.png"
+  "/pertes-farm/",
+  "/pertes-farm/index.html",
+  "/pertes-farm/style.css",
+  "/pertes-farm/manifest.json",
+  "/pertes-farm/products.json",
+  "/pertes-farm/jsbarcode.min.js",
+  "/pertes-farm/js/main.js",
+  "/pertes-farm/images/ic_launcher",
+  "/pertes-farm/images/playstore.png"
 ];
 
 // 3. INSTALL event — caches all assets
@@ -48,3 +48,4 @@ self.addEventListener("fetch", event => {
     })
   );
 });
+
