@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discard Barcodes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <header>
+        <img src="images/farm-logo.webp" alt="farm-logo">
+        <h1>Pertes fruits & legumes</h1>
+        <button id="mode-toggle-button" aria-label="Changer de mode">
+            <span id="mode-lock-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="white"
+                        d="M5 22h14a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2V7A5 5 0 0 0 7 7v2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zm7-4.5a2 2 0 1 1 2-2 2 2 0 0 1-2 2zM9 9V7a3 3 0 0 1 6 0v2H9z" />
+                </svg>
+            </span>
+            <span id="mode-text">
+                Modifier
+            </span>
+        </button>
+    </header>
+
+    <main>
+        <input type="text" id="search-input" placeholder="Rechercher..." />
+        <div id="product-grid"></div>
+
+        <!-- edit mode add-button -->
+        <button class="edit-mode light-btn hidden" id="add-btn">＋ Ajouter un produit</button>
+    </main>
+
+    <!-- view mode -->
+    <div class="view-mode blur hidden" id="barcode-overlay">
+        <div class="overlay-content">
+            <button class="light-btn" id="barcode-back-button">Retour</button>
+            <div id="barcode-large"></div>
+        </div>
+    </div>
+
+    <!-- edit mode -->
+    <div class="edit-mode blur hidden" id="product-form-overlay">
+        <div class="overlay-content">
+            <h2 id="overlay-title"></h2>
+
+            <input type="text" id="product-name" placeholder="Nom du produit" required>
+            <input type="text" id="product-code" placeholder="Code barre" required>
+
+            <div id="edit-controls">
+                <button id="save-product">Sauvegarder</button>
+                <button id="cancel-product">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="jsbarcode.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

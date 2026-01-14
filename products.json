@@ -1,0 +1,350 @@
+[
+  {
+    "barcode": 2720330000000,
+    "name": "AIL"
+  },
+  {
+    "barcode": 2720360000000,
+    "name": "AIL NOIR"
+  },
+  {
+    "barcode": 2721660000000,
+    "name": "AUBERGINE"
+  },
+  {
+    "barcode": 2720810000000,
+    "name": "BETTRAVE ROUGE"
+  },
+  {
+    "barcode": 2721780000000,
+    "name": "BETTES"
+  },
+  {
+    "barcode": 2721790000000,
+    "name": "BETTE COULEUR"
+  },
+  {
+    "barcode": 2720470000000,
+    "name": "BROCCOLI"
+  },
+  {
+    "barcode": 2720890000000,
+    "name": "SALSIFIS"
+  },
+  {
+    "barcode": 2720190000000,
+    "name": "CAROTTE COULEUR"
+  },
+  {
+    "barcode": 2720150000000,
+    "name": "CAROTTE"
+  },
+  {
+    "barcode": 2720870000000,
+    "name": "CELERI RAVE"
+  },
+  {
+    "barcode": 2722390000000,
+    "name": "CELERI VERT"
+  },
+  {
+    "barcode": 2722560000000,
+    "name": "CHAMPIGNON CHATAIGNE"
+  },
+  {
+    "barcode": 2722530000000,
+    "name": "CHAMPIGNON BLANC"
+  },
+  {
+    "barcode": 2720380000000,
+    "name": "CHOU BLANC"
+  },
+  {
+    "barcode": 2720450000000,
+    "name": "CHOU CHINOIS"
+  },
+  {
+    "barcode": 2720550000000,
+    "name": "CHOU DE BRUXELLES"
+  },
+  {
+    "barcode": 2720500000000,
+    "name": "CHOU FLEUR"
+  },
+  {
+    "barcode": 2720420000000,
+    "name": "CHOU FRISE"
+  },
+  {
+    "barcode": 2720440000000,
+    "name": "CHOU POINTU"
+  },
+  {
+    "barcode": 2720540000000,
+    "name": "CHOU RAVE"
+  },
+  {
+    "barcode": 2720530000000,
+    "name": "CHOU ROMANESCO"
+  },
+  {
+    "barcode": 2720390000000,
+    "name": "CHOU ROUGE"
+  },
+  {
+    "barcode": 2721370000000,
+    "name": "CONCOMBRE"
+  },
+  {
+    "barcode": 2722470000000,
+    "name": "CORIANDRE BOTTE"
+  },
+  {
+    "barcode": 2721320000000,
+    "name": "COURGETTE"
+  },
+  {
+    "barcode": 2720740000000,
+    "name": "CURCUMA"
+  },
+  {
+    "barcode": 2720980000000,
+    "name": "DAIKON"
+  },
+  {
+    "barcode": 2720250000000,
+    "name": "ECHALOTTE"
+  },
+  {
+    "barcode": 2722270000000,
+    "name": "EPINARD"
+  },
+  {
+    "barcode": 2722620000000,
+    "name": "ERYNGII"
+  },
+  {
+    "barcode": 2720760000000,
+    "name": "FENOUIL"
+  },
+  {
+    "barcode": 2720720000000,
+    "name": "GINGEMBRE"
+  },
+  {
+    "barcode": 2721480000000,
+    "name": "HARICOT COUPE"
+  },
+  {
+    "barcode": 2721860000000,
+    "name": "LAITUE"
+  },
+  {
+    "barcode": 2721920000000,
+    "name": "LAITUE ICEBERG"
+  },
+  {
+    "barcode": 2721010000000,
+    "name": "NAVETS BLEU"
+  },
+  {
+    "barcode": 2721020000000,
+    "name": "NAVETS JAUNE"
+  },
+  {
+    "barcode": 2720210000000,
+    "name": "OIGNON"
+  },
+  {
+    "barcode": 2720230000000,
+    "name": "OIGNON ROUGE"
+  },
+  {
+    "barcode": 2720460000000,
+    "name": "PAKSOI"
+  },
+  {
+    "barcode": 2720920000000,
+    "name": "PANAIS"
+  },
+  {
+    "barcode": 2720130000000,
+    "name": "PATATE DOUCE"
+  },
+  {
+    "barcode": 2722330000000,
+    "name": "PERSIL FRISE"
+  },
+  {
+    "barcode": 2721300000000,
+    "name": "PIMENT ROUGE"
+  },
+  {
+    "barcode": 2722590000000,
+    "name": "PLEUROTTES"
+  },
+  {
+    "barcode": 2722180000000,
+    "name": "POIREAU"
+  },
+  {
+    "barcode": 2721330000000,
+    "name": "POIVRON RAMIRO"
+  },
+  {
+    "barcode": 2721240000000,
+    "name": "POIVRON ROUGE"
+  },
+  {
+    "barcode": 2720030000000,
+    "name": "POMME DE TERRE"
+  },
+  {
+    "barcode": 2722640000000,
+    "name": "PORTOBELLO"
+  },
+  {
+    "barcode": 2721590000000,
+    "name": "POTIMARRON BUTTERNUT"
+  },
+  {
+    "barcode": 2721560000000,
+    "name": "POTIMARRON ORANGE"
+  },
+  {
+    "barcode": 2721570000000,
+    "name": "POTIMARRON VERT"
+  },
+  {
+    "barcode": 2720960000000,
+    "name": "RACINE DE PERSIL"
+  },
+  {
+    "barcode": 2721950000000,
+    "name": "RADICCHIO"
+  },
+  {
+    "barcode": 2722370000000,
+    "name": "RADIS"
+  },
+  {
+    "barcode": 2720860000000,
+    "name": "RADIS NOIRE"
+  },
+  {
+    "barcode": 2722040000000,
+    "name": "RUCOLA EMBALLE"
+  },
+  {
+    "barcode": 2722610000000,
+    "name": "SHIITAKE"
+  },
+  {
+    "barcode": 2721060000000,
+    "name": "TOMATES BRANCHE"
+  },
+  {
+    "barcode": 2721080000000,
+    "name": "TOMATES CHERRY"
+  },
+  {
+    "barcode": 2721150000000,
+    "name": "TOMATE ROMA"
+  },
+  {
+    "barcode": 2720780000000,
+    "name": "TOPINAMBOUR"
+  },
+  {
+    "barcode": 2726060000000,
+    "name": "ALOE VERA"
+  },
+  {
+    "barcode": 2726090000000,
+    "name": "ANANAS"
+  },
+  {
+    "barcode": 2725910000000,
+    "name": "AVOCAT HASS"
+  },
+  {
+    "barcode": 2726240000000,
+    "name": "BANANES"
+  },
+  {
+    "barcode": 2725740000000,
+    "name": "CITRON"
+  },
+  {
+    "barcode": 2725710000000,
+    "name": "CLEMENTINES"
+  },
+  {
+    "barcode": 2750530000000,
+    "name": "DATTES MEDJOUL"
+  },
+  {
+    "barcode": 2726070000000,
+    "name": "GRENADE"
+  },
+  {
+    "barcode": 2726050000000,
+    "name": "KAKI"
+  },
+  {
+    "barcode": 2725860000000,
+    "name": "KIWI"
+  },
+  {
+    "barcode": 2725870000000,
+    "name": "KIWI GOLD"
+  },
+  {
+    "barcode": 2725850000000,
+    "name": "KUMQUATS"
+  },
+  {
+    "barcode": 2725770000000,
+    "name": "LIME"
+  },
+  {
+    "barcode": 2725980000000,
+    "name": "MANGUE"
+  },
+  {
+    "barcode": 2726930000000,
+    "name": "MYRTILLES"
+  },
+  {
+    "barcode": 2726320000000,
+    "name": "NOIX"
+  },
+  {
+    "barcode": 2725650000000,
+    "name": "ORANGE"
+  },
+  {
+    "barcode": 2725660000000,
+    "name": "ORANGE A JUS"
+  },
+  {
+    "barcode": 272580000000,
+    "name": "PAMPLEMOUSSE ROSE"
+  },
+  {
+    "barcode": 2750540000000,
+    "name": "PHYSALIS"
+  },
+  {
+    "barcode": 2725550000000,
+    "name": "POIRE"
+  },
+  {
+    "barcode": 2725070000000,
+    "name": "POMME"
+  },
+  {
+    "barcode": 2726670000000,
+    "name": "RAISIN BLANC SANS PÉPIN"
+  }
+]
