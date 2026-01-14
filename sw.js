@@ -1,7 +1,7 @@
 // SW.js - service worker
 
 // 1. Name of the cache
-const CACHE_NAME = "pertes-v1";
+const CACHE_NAME = "pertes-v1.1";
 
 // 2. List of files to cache
 const ASSETS = [
@@ -48,4 +48,5 @@ self.addEventListener("fetch", event => {
     })
   );
 });
+
 
