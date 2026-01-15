@@ -351,12 +351,12 @@ header #mode-toggle-button span:last-child {
 
 /* trash icon (button) */
 #trash-icon {
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
 
   position: absolute;
-  top: 13px;
-  right: 28px;
+  top: 10px;
+  right: 26px;
 
   background: none;
   border: none;
