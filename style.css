@@ -368,9 +368,6 @@ header #mode-toggle-button span:last-child {
 
 /* trash icon (button) */
 #trash-icon {
-  width: 47px;
-  height: 47px;
-
   position: absolute;
   top: 10px;
   right: 10px;
@@ -378,6 +375,11 @@ header #mode-toggle-button span:last-child {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+#trash-icon svg {
+  width: 32px;
+  height: 32px;
 }
 
 /* Save Button */
