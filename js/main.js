@@ -14,8 +14,14 @@ const addBtn = document.getElementById("add-btn");
 const productOverlay = document.getElementById("product-form-overlay");
 const productNameInput = document.getElementById("product-name");
 const productBarcodeInput = document.getElementById("product-code");
+const trashBtn = document.getElementById("trash-icon");
 const saveBtn = document.getElementById("save-product");
 const cancelBtn = document.getElementById("cancel-product");
+
+const deletionPrompt = document.getElementById("deletion-prompt");
+const deleteProductName = document.getElementById("delete-product-name");
+const confirmDeleteBtn = document.getElementById("delete-product");
+const cancelDeleteBtn = document.getElementById("cancel-delete-product");
 
 /* STORAGE API */
 const Storage = {
@@ -134,11 +140,7 @@ function render(list) {
         if (isEditMode) {
             const visibilityBtn = document.createElement("button");
             visibilityBtn.className = "visibility-toggle";
-            visibilityBtn.setAttribute("aria-label", "Toggle visibility")
-
-            const trashBtn = document.createElement("button");
-            trashBtn.className = "trash-button";
-            trashBtn.setAttribute("aria-label", "delete product");
+            visibilityBtn.setAttribute("aria-label", "Toggle visibility");
 
             if (product.visible) {
                 visibilityBtn.classList.add("on");
@@ -151,13 +153,8 @@ function render(list) {
                 render(products);
             };
 
-            trashBtn.onclick = (e) => {
-                e.stopPropagation();
-                deleteProduct(product.id);
-            }
-
             productCard.appendChild(visibilityBtn);
-            productCard.appendChild(trashBtn);
+
         }
 
     }
@@ -196,14 +193,28 @@ function openEditOverlay(id) {
 
     // show overlay
     productOverlay.style.display = "flex";
+    trashBtn.style.display = "block"
     productNameInput.value = product.name;
     productBarcodeInput.value = product.barcode;
+}
+
+function promptForDeletion(id) {
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+
+    deletionPrompt.style.display = "flex";
+    deleteProductName.value = product.name;
+}
+
+function closeDeletionPrompt() {
+    deletionPrompt.style.display = "none";
 }
 
 function closeProductOverlay() {
     overlayMode = null;
     editingProductId = null;
     productOverlay.style.display = "none";
+    trashBtn.style.display = "none";
     productNameInput.value = "";
     productBarcodeInput.value = "";
 }
@@ -214,6 +225,7 @@ function openAddOverlay() {
     // show overlay
     overlayMode = "add";
     productOverlay.style.display = "flex";
+    trashBtn.style.display = "none";
 }
 
 
@@ -229,6 +241,35 @@ grid.addEventListener("click", e => {
         showBarcode(id);
     }
 });
+
+trashBtn.addEventListener(
+    "click",
+    () => {
+        if (editingProductId) {
+            productOverlay.style.display = "none";
+            promptForDeletion(editingProductId);
+        }
+    }
+);
+
+confirmDeleteBtn.addEventListener(
+    "click",
+    () => {
+        if (editingProductId) {
+            deleteProduct(editingProductId);
+            closeDeletionPrompt();
+            closeProductOverlay();
+        }
+    }
+);
+
+cancelDeleteBtn.addEventListener(
+    "click",
+    () => {
+        closeDeletionPrompt();
+        productOverlay.style.display = "flex";
+    }
+)
 
 saveBtn.addEventListener(
     "click",

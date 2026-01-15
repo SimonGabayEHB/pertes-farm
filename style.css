@@ -209,6 +209,7 @@ header #mode-toggle-button span:last-child {
 }
 
 .overlay-content {
+  position: relative;
   background: white;
   padding: 20px;
   text-align: center;
@@ -368,6 +369,13 @@ header #mode-toggle-button span:last-child {
   transition: all 0.15s ease;
 }
 
+/* trash icon (button) */
+#trash-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 /* Save Button */
 #save-product {
   background: linear-gradient(135deg, #3fa66c, #2f8f5b);
@@ -397,4 +405,5 @@ header #mode-toggle-button span:last-child {
   background: #d8d7d7;
   transform: translateY(1px);
 }
+
 
