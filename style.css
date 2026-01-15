@@ -477,17 +477,19 @@ header #mode-toggle-button span:last-child {
 }
 
 /* Delete Button - red/danger style */
+/* Delete Button - softer pastel red */
+/* Delete Button - full red but less flashy */
 #delete-product {
-  background: linear-gradient(135deg, #f44336, #d32f2f);
+  background: linear-gradient(135deg, #e63946, #c92a2a);
   color: white;
 }
 
 #delete-product:hover {
-  background: linear-gradient(135deg, #e53935, #c62828);
+  background: linear-gradient(135deg, #d62839, #b82424);
 }
 
 #delete-product:active {
-  background: linear-gradient(135deg, #e53935, #c62828);
+  background: linear-gradient(135deg, #d62839, #b82424);
   transform: translateY(1px);
 }
 
