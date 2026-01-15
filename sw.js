@@ -1,7 +1,7 @@
 // SW.js - service worker
 
 // 1. Name of the cache
-const CACHE_NAME = "pertes-v1.1";
+const CACHE_NAME = "pertes-v1.2";
 
 // 2. List of files to cache
 const ASSETS = [
@@ -10,10 +10,13 @@ const ASSETS = [
   "/pertes-farm/style.css",
   "/pertes-farm/manifest.json",
   "/pertes-farm/products.json",
-  "/pertes-farm/jsbarcode.min.js",
+  "/pertes-farm/JsBarcode.min.js",
   "/pertes-farm/js/main.js",
-  "/pertes-farm/images/ic_launcher",
-  "/pertes-farm/images/playstore.png"
+  "/pertes-farm/images/ic_launcher.png",
+  "/pertes-farm/images/playstore.png",
+  "/pertes-farm/images/farm-logo.webp",
+  "pertes-farm/fonts/PatuaOne-Regular.woff2",
+  "/pertes-farm/fonts/PatuaOne-Regular.woff"
 ];
 
 // 3. INSTALL event — caches all assets
@@ -23,6 +26,7 @@ self.addEventListener("install", event => {
       return cache.addAll(ASSETS);
     })
   );
+  self.skipWaiting();
 });
 
 // 4. ACTIVATE event — cleans up old caches
@@ -38,6 +42,7 @@ self.addEventListener("activate", event => {
       )
     )
   );
+  self.clients.claim();
 });
 
 // 5. FETCH event — serve cached files when offline
