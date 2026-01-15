@@ -325,12 +325,16 @@ barcodeBackBtn.addEventListener("click", e => hideBarcode());
 cancelBtn.addEventListener("click", e => closeProductOverlay());
 
 
-productNameInput.addEventListener("focus", () => {
-    productNameInput.classList.remove("error");
+productNameInput.addEventListener("input", () => {
+    if (productNameInput.classList.contains("error")) {
+        productNameInput.classList.remove("error");
+    }
 });
 
-productBarcodeInput.addEventListener("focus", () => {
-    productBarcodeInput.classList.remove("error");
+productBarcodeInput.addEventListener("input", () => {
+    if (productBarcodeInput.classList.contains("error")) {
+        productBarcodeInput.classList.remove("error");
+    }
 });
 
 
