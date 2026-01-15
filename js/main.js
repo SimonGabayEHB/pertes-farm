@@ -221,6 +221,7 @@ function closeProductOverlay() {
     trashBtn.style.display = "none";
     productNameInput.value = "";
     productBarcodeInput.value = "";
+    clearInputErrors();
 }
 
 
@@ -345,12 +346,6 @@ searchInput.addEventListener("input", () => {
 
 /* HELPER FUNCTIONS */
 function addProduct(name, barcode) {
-    // Check for duplicate barcode
-    if (products.some(p => p.barcode === barcode)) {
-        alert("Ce code-barres existe déjà!");
-        return;
-    }
-    
     const newProduct = {
         name,
         barcode,
@@ -380,6 +375,12 @@ function deleteProduct(id) {
     products = products.filter(p => p.id !== id);
     Storage.saveProducts(products);
     render(products);
+}
+
+/* CLEAR INPUT ERRORS */
+function clearInputErrors() {
+    productNameInput.classList.remove("error");
+    productBarcodeInput.classList.remove("error");
 }
 
 function showToast(message) {
