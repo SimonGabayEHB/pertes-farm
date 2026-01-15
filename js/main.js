@@ -385,7 +385,8 @@ function clearInputErrors() {
 
 function showToast(message) {
     errorMessage.textContent = message;
-    toast.classList.remove("hidden");
+    toast.style.display = "flex";
+
     
     // Trigger animation
     setTimeout(() => toast.classList.add("show"), 10);
@@ -393,7 +394,7 @@ function showToast(message) {
     // Hide after 3 seconds
     setTimeout(() => {
         toast.classList.remove("show");
-        setTimeout(() => toast.classList.add("hidden"), 300);
+        setTimeout(() => toast.style.display = "none", 300);
     }, 3000);
 }
 
