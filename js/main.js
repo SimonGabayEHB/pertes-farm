@@ -203,7 +203,7 @@ function promptForDeletion(id) {
     if (!product) return;
 
     deletionPrompt.style.display = "flex";
-    deleteProductName.value = product.name;
+    deleteProductName.textContent = product.name;
 }
 
 function closeDeletionPrompt() {
