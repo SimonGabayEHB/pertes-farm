@@ -271,24 +271,26 @@ cancelDeleteBtn.addEventListener(
     }
 )
 
-saveBtn.addEventListener(
-    "click",
-    () => {
-        if (overlayMode === "edit") {
-            editProduct(
-                editingProductId,
-                productNameInput.value,
-                productBarcodeInput.value);
-        }
+saveBtn.addEventListener("click", () => {
+    // Validate inputs
+    const name = productNameInput.value.trim();
+    const barcode = productBarcodeInput.value.trim();
+    
+    if (!name || !barcode) {
+        alert("Veuillez remplir tous les champs");
+        return;
+    }
 
-        if (overlayMode === "add") {
-            addProduct(
-                productNameInput.value,
-                productBarcodeInput.value);
-        }
+    if (overlayMode === "edit") {
+        editProduct(editingProductId, name, barcode);
+    }
 
-        closeProductOverlay()
-    });
+    if (overlayMode === "add") {
+        addProduct(name, barcode);
+    }
+
+    closeProductOverlay();
+});
 
 addBtn.addEventListener("click", e => openAddOverlay());
 
@@ -301,35 +303,41 @@ cancelBtn.addEventListener("click", e => closeProductOverlay());
 /* SEARCH */
 searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
-    render(products.filter(p => p.searchName.includes(query)));
+    if (query === "") {
+        render(products);
+    } else {
+        render(products.filter(p => p.searchName.includes(query)));
+    }
 });
 
 /* HELPER FUNCTIONS */
 function addProduct(name, barcode) {
+    // Check for duplicate barcode
+    if (products.some(p => p.barcode === barcode)) {
+        alert("Ce code-barres existe déjà!");
+        return;
+    }
+    
     const newProduct = {
         name,
         barcode,
         id: crypto.randomUUID(),
         visible: true,
         searchName: name.toLowerCase()
-    }
+    };
     products.push(newProduct);
     Storage.saveProducts(products);
     render(products);
 }
 
-function editProduct(id, name = false, barcode = false) {
+function editProduct(id, name, barcode) { // Remove = false
     const index = products.findIndex(p => p.id === id);
     if (index === -1) return;
 
-    if (name) {
-        products[index].name = name;
-        products[index].searchName = name.toLowerCase();
-    }
-
-    if (barcode) {
-        products[index].barcode = barcode;
-    }
+    // Always update both since we're always passing both from saveBtn
+    products[index].name = name;
+    products[index].searchName = name.toLowerCase();
+    products[index].barcode = barcode;
 
     Storage.saveProducts(products);
     render(products);
