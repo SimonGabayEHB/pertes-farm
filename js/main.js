@@ -82,6 +82,7 @@ function applyEditModeUI() {
 modeToggleBtn.onclick = () => {
     isEditMode = !isEditMode;
     applyEditModeUI();
+    searchInput.value = "";
     render(products);
 }
 
