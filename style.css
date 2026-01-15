@@ -504,8 +504,8 @@ header #mode-toggle-button span:last-child {
   transform: translateX(-50%) translateY(-100px);
   
   padding: 16px 24px;
-  background: linear-gradient(135deg, #e63946, #c92a2a); /* Always red */
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   
