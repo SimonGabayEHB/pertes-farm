@@ -23,6 +23,9 @@ const deleteProductName = document.getElementById("delete-product-name");
 const confirmDeleteBtn = document.getElementById("delete-product");
 const cancelDeleteBtn = document.getElementById("cancel-delete-product");
 
+const toast = document.getElementById("toast");
+const errorMessage = document.getElementById("error-message");
+
 /* STORAGE API */
 const Storage = {
     getProducts: () => JSON.parse(localStorage.getItem("products") || "[]"),
@@ -273,15 +276,35 @@ cancelDeleteBtn.addEventListener(
 )
 
 saveBtn.addEventListener("click", () => {
-    // Validate inputs
+    clearInputErrors();
+    
     const name = productNameInput.value.trim();
     const barcode = productBarcodeInput.value.trim();
     
-    if (!name || !barcode) {
-        alert("Veuillez remplir tous les champs");
+    // Validation - ONLY show toasts for errors
+    if (!name) {
+        productNameInput.classList.add("error");
+        productNameInput.focus();
+        showToast("Le nom du produit est requis");
+        return;
+    }
+    
+    if (!barcode) {
+        productBarcodeInput.classList.add("error");
+        productBarcodeInput.focus();
+        showToast("Le code-barres est requis");
+        return;
+    }
+    
+    // Check for duplicate barcode when adding
+    if (overlayMode === "add" && products.some(p => p.barcode === barcode)) {
+        productBarcodeInput.classList.add("error");
+        productBarcodeInput.focus();
+        showToast("Ce code-barres existe déjà!");
         return;
     }
 
+    // Success - NO toast, just do the action
     if (overlayMode === "edit") {
         editProduct(editingProductId, name, barcode);
     }
@@ -299,6 +322,15 @@ barcodeBackBtn.addEventListener("click", e => hideBarcode());
 
 
 cancelBtn.addEventListener("click", e => closeProductOverlay());
+
+
+productNameInput.addEventListener("focus", () => {
+    productNameInput.classList.remove("error");
+});
+
+productBarcodeInput.addEventListener("focus", () => {
+    productBarcodeInput.classList.remove("error");
+});
 
 
 /* SEARCH */
@@ -348,6 +380,20 @@ function deleteProduct(id) {
     products = products.filter(p => p.id !== id);
     Storage.saveProducts(products);
     render(products);
+}
+
+function showToast(message) {
+    errorMessage.textContent = message;
+    toast.classList.remove("hidden");
+    
+    // Trigger animation
+    setTimeout(() => toast.classList.add("show"), 10);
+    
+    // Hide after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.classList.add("hidden"), 300);
+    }, 3000);
 }
 
 
