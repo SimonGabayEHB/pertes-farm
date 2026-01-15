@@ -15,7 +15,7 @@ const ASSETS = [
   "/pertes-farm/images/ic_launcher.png",
   "/pertes-farm/images/playstore.png",
   "/pertes-farm/images/farm-logo.webp",
-  "pertes-farm/fonts/PatuaOne-Regular.woff2",
+  "/pertes-farm/fonts/PatuaOne-Regular.woff2",
   "/pertes-farm/fonts/PatuaOne-Regular.woff"
 ];
 

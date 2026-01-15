@@ -497,7 +497,7 @@ header #mode-toggle-button span:last-child {
 /* ----------------------------
    TOAST NOTIFICATION
 ---------------------------- */
-.toast {
+#toast {
   position: fixed;
   top: 20px;
   left: 50%;
@@ -521,16 +521,17 @@ header #mode-toggle-button span:last-child {
   transition: transform 0.3s ease;
 }
 
-.toast svg {
+#toast svg {
   flex-shrink: 0;
 }
 
-.toast.show {
+#toast.show {
   transform: translateX(-50%) translateY(0);
 }
 
 /* Input error styling */
-input.error {
+#product-form-overlay input.error,
+#product-form-overlay input.error:focus {
   border-color: #e63946 !important;
   box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.12) !important;
 }
