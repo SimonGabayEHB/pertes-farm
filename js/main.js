@@ -46,6 +46,7 @@ async function loadProducts() {
         const baseProducts = await res.json();
         const processed = baseProducts.map(p => ({
             ...p,
+            barcode: String(p.barcode),
             id: crypto.randomUUID(),
             visible: true,
             searchName: p.name.toLowerCase()
