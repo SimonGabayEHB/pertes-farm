@@ -261,6 +261,8 @@ header #mode-toggle-button span:last-child {
   bottom: 16px;
   right: 16px;
 
+  text-align: center;
+
   padding: 14px 16px;
 
   background: linear-gradient(135deg, #3fa66c, #2f8f5b);  /* Your green */
