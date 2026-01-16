@@ -35,29 +35,35 @@ body {
 /* ----------------------------
    Header
 ---------------------------- */
+/* ----------------------------
+   Header
+---------------------------- */
 header {
   background-color: black;
   color: white;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   padding: 1.5em;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto;
+  align-items: center;
   gap: 10px;
 }
 
 header img {
+  grid-column: 1;
+  grid-row: 1;
   width: 7em;
-  order: 1;
 }
 
 header h1 {
-  order: 2;
-  flex: 1;
+  grid-column: 2;
+  grid-row: 1;
   padding-left: 50px;
 }
 
 header #mode-toggle-button {
-  order: 3;
+  grid-column: 3;
+  grid-row: 1;
   background-color: black;
   color: white;
   border: none;
@@ -66,13 +72,12 @@ header #mode-toggle-button {
   display: flex;
   align-items: center;
   gap: 5px;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap;
 }
 
 header #mode-toggle-button span:last-child {
   display: inline-block;
   margin-top: 6px;
-  width: 70px;
 }
 
 #mode-lock-icon {
@@ -90,29 +95,29 @@ header #mode-toggle-button span:last-child {
 @media (max-width: 768px) {
   header {
     padding: 1em;
-    gap: 8px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
   }
   
   header img {
+    grid-column: 1;
+    grid-row: 1;
     width: 4.5em;
-    order: 1;
   }
   
   header #mode-toggle-button {
-    order: 2;
-    font-size: 0.9rem;
-  }
-  
-  header #mode-toggle-button span:last-child {
-    width: auto;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    font-size: 0.85rem;
   }
   
   header h1 {
-    order: 3;
-    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 2;
     padding-left: 0;
     font-size: 1.2rem;
-    margin-top: 4px;
+    margin-top: 8px;
   }
 }
 
