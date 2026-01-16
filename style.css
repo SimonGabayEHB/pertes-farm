@@ -128,7 +128,7 @@ header #mode-toggle-button span:last-child {
 
 .product-name {
   font-weight: bold;
-  width: 70%;
+  width: 80%;
 
   margin: 0 auto 8px auto;
 }
@@ -147,8 +147,8 @@ header #mode-toggle-button span:last-child {
 ---------------------------- */
 .visibility-toggle {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  bottom: 8px;
+  right: 8px;
 
   width: 24px;  /* Smaller circle */
   height: 24px;
@@ -499,7 +499,7 @@ header #mode-toggle-button span:last-child {
 ---------------------------- */
 #toast {
   position: fixed;
-  top: 20px;
+  top: 2dvh;
   left: 50%;
   transform: translateX(-50%) translateY(-100px);
   

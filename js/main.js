@@ -344,7 +344,16 @@ searchInput.addEventListener("input", () => {
     if (query === "") {
         render(products);
     } else {
-        render(products.filter(p => p.searchName.includes(query)));
+        const filtered = products.filter(p => p.searchName.includes(query));
+        // Sort: matches at start first, then alphabetically
+        const sorted = filtered.sort((a, b) => {
+            const aStarts = a.searchName.startsWith(query);
+            const bStarts = b.searchName.startsWith(query);
+            if (aStarts && !bStarts) return -1;
+            if (!aStarts && bStarts) return 1;
+            return a.name.localeCompare(b.name, "fr");
+        });
+        render(sorted);
     }
 });
 
