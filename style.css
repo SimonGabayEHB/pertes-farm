@@ -261,35 +261,17 @@ header #mode-toggle-button span:last-child {
   bottom: 16px;
   right: 16px;
 
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;  /* Circle */
-  
-  font-size: 2rem;
-  padding: 0;
+  padding: 14px 16px;
 
   background-color: white;
-  color: #2f8f5b;  /* Green text */
+  color: #2f8f5b;
   border: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* Normal shadow */
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#add-btn.hidden {
-  display: none !important;  /* Override flex when hidden */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 #add-btn:hover {
   background-color: #f8f8f8;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
-}
-
-#add-btn:active {
-  transform: translateY(1px) scale(1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ----------------------------
