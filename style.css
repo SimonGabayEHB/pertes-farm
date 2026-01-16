@@ -258,25 +258,31 @@ header #mode-toggle-button span:last-child {
 ---------------------------- */
 #add-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 16px;
+  right: 16px;
 
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;  /* Circle */
-  
-  font-size: 2rem;
-  padding: 0;
+  padding: 14px 16px;
 
-  background: linear-gradient(135deg, #3fa66c, #2f8f5b);
+  background-color: #333;  /* Dark grey - doesn't clash with green */
   color: white;
   border: none;
-  box-shadow: 0 6px 20px rgba(47, 143, 91, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* Normal shadow */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 #add-btn:hover {
-  box-shadow: 0 8px 24px rgba(47, 143, 91, 0.5);
-  transform: scale(1.05);
+  background-color: #444;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+#add-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* ----------------------------
