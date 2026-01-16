@@ -40,7 +40,7 @@ async function loadProducts() {
     const stored = Storage.getProducts();
 
     if (stored.length > 0) {
-        return stored;
+        return sortProductsByName(stored);
     } else {
         const res = await fetch("products.json");
         const baseProducts = await res.json();
@@ -50,8 +50,9 @@ async function loadProducts() {
             visible: true,
             searchName: p.name.toLowerCase()
         }));
-        Storage.saveProducts(processed);
-        return processed;
+        const sorted = sortProductsByName(processed);
+        Storage.saveProducts(sorted);
+        return sorted;
     }
 }
 
@@ -108,9 +109,6 @@ function sortProductsByName(list) {
 /* RENDERING */
 function render(list) {
     grid.innerHTML = "";
-
-    const sortedList = sortProductsByName(list);
-
 
     for (const product of sortedList) {
         if (!isEditMode && product.visible === false) continue;
@@ -367,6 +365,7 @@ function addProduct(name, barcode) {
         searchName: name.toLowerCase()
     };
     products.push(newProduct);
+    products = sortProductsByName(products);
     Storage.saveProducts(products);
     render(products);
 }
@@ -380,6 +379,7 @@ function editProduct(id, name, barcode) { // Remove = false
     products[index].searchName = name.toLowerCase();
     products[index].barcode = barcode;
 
+    products = sortProductsByName(products);
     Storage.saveProducts(products);
     render(products);
 }
