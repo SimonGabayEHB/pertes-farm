@@ -268,12 +268,12 @@ header #mode-toggle-button span:last-child {
   background: linear-gradient(135deg, #3fa66c, #2f8f5b);  /* Your green */
   color: white;
   border: none;
-  box-shadow: 0 4px 12px rgba(47, 143, 91, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 #add-btn:hover {
   background: linear-gradient(135deg, #4cb67b, #36a368);
-  box-shadow: 0 6px 16px rgba(47, 143, 91, 0.4);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 /* ----------------------------
