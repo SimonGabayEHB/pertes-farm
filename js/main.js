@@ -110,7 +110,7 @@ function sortProductsByName(list) {
 function render(list) {
     grid.innerHTML = "";
 
-    for (const product of sortedList) {
+    for (const product of list) {
         if (!isEditMode && product.visible === false) continue;
 
         // product-card -> external div
