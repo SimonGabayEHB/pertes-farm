@@ -53,7 +53,7 @@ header img {
   grid-column: 1;
   grid-row: 1;
   width: 7em;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 header h1 {
@@ -106,6 +106,7 @@ header #mode-toggle-button span:last-child {
     grid-column: 1;
     grid-row: 1;
     width: 4.5em;
+    margin-bottom: 0;
   }
   
   header #mode-toggle-button {
