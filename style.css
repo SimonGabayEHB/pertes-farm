@@ -547,9 +547,9 @@ header #mode-toggle-button span:last-child {
 ---------------------------- */
 #toast {
   position: fixed;
-  top: 2dvh;
+  top: 10dvh; /* Position 10% from top of VISIBLE viewport */
   left: 50%;
-  transform: translateX(-50%) translateY(-100px);
+  transform: translateX(-50%);
   
   padding: 16px 24px;
   background-color: white;
@@ -566,7 +566,8 @@ header #mode-toggle-button span:last-child {
   text-align: center;
   z-index: 2000;
   
-  transition: transform 0.3s ease;
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.3s ease; /* Fade instead of slide */
 }
 
 #toast svg {
@@ -574,7 +575,7 @@ header #mode-toggle-button span:last-child {
 }
 
 #toast.show {
-  transform: translateX(-50%) translateY(0);
+  opacity: 1; /* Fade in */
 }
 
 /* Input error styling */
