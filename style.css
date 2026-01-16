@@ -35,12 +35,11 @@ body {
 /* ----------------------------
    Header
 ---------------------------- */
-/* Header */
 header {
   background-color: black;
   color: white;
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping on mobile */
+  flex-wrap: wrap;
   align-items: center;
   padding: 1.5em;
   gap: 10px;
@@ -48,50 +47,72 @@ header {
 
 header img {
   width: 7em;
+  order: 1;
 }
 
 header h1 {
+  order: 2;
+  flex: 1;
   padding-left: 50px;
-  flex: 1; /* Take remaining space */
 }
 
 header #mode-toggle-button {
+  order: 3;
   background-color: black;
-  padding-left: 10px;
   color: white;
   border: none;
   cursor: pointer;
   font-family: inherit;
-  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 5px;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-/* Mobile styles */
+header #mode-toggle-button span:last-child {
+  display: inline-block;
+  margin-top: 6px;
+  width: 70px;
+}
+
+#mode-lock-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+#mode-lock-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile/Tablet styles */
 @media (max-width: 768px) {
   header {
-    align-items: flex-start;
     padding: 1em;
+    gap: 8px;
   }
   
   header img {
-    width: 5em; /* Slightly smaller on mobile */
+    width: 4.5em;
     order: 1;
   }
   
   header #mode-toggle-button {
     order: 2;
-    margin-left: auto;
-    padding-left: 0;
+    font-size: 0.9rem;
+  }
+  
+  header #mode-toggle-button span:last-child {
+    width: auto;
   }
   
   header h1 {
     order: 3;
-    width: 100%; /* Full width = new line */
+    width: 100%;
     padding-left: 0;
-    margin-top: 8px;
-    font-size: 1.3rem; /* Smaller text on mobile */
+    font-size: 1.2rem;
+    margin-top: 4px;
   }
 }
 
