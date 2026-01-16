@@ -10,6 +10,11 @@
 /* ----------------------------
    Global
 ---------------------------- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,20 +35,24 @@ body {
 /* ----------------------------
    Header
 ---------------------------- */
+/* Header */
 header {
   background-color: black;
   color: white;
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap; /* Allow wrapping on mobile */
+  align-items: center;
   padding: 1.5em;
-}
-
-header h1 {
-  padding-left: 50px;
+  gap: 10px;
 }
 
 header img {
   width: 7em;
+}
+
+header h1 {
+  padding-left: 50px;
+  flex: 1; /* Take remaining space */
 }
 
 header #mode-toggle-button {
@@ -59,21 +68,31 @@ header #mode-toggle-button {
   gap: 5px;
 }
 
-header #mode-toggle-button span:last-child {
-  display: inline-block;
-  margin-top: 6px;
-  width: 70px;
-}
-
-#mode-lock-icon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-}
-
-#mode-lock-icon svg {
-  width: 100%;
-  height: 100%;
+/* Mobile styles */
+@media (max-width: 768px) {
+  header {
+    align-items: flex-start;
+    padding: 1em;
+  }
+  
+  header img {
+    width: 5em; /* Slightly smaller on mobile */
+    order: 1;
+  }
+  
+  header #mode-toggle-button {
+    order: 2;
+    margin-left: auto;
+    padding-left: 0;
+  }
+  
+  header h1 {
+    order: 3;
+    width: 100%; /* Full width = new line */
+    padding-left: 0;
+    margin-top: 8px;
+    font-size: 1.3rem; /* Smaller text on mobile */
+  }
 }
 
 /* ----------------------------
