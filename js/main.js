@@ -368,6 +368,7 @@ function addProduct(name, barcode) {
     products.push(newProduct);
     products = sortProductsByName(products);
     Storage.saveProducts(products);
+    searchInput.value = "";
     render(products);
 }
 
@@ -382,12 +383,14 @@ function editProduct(id, name, barcode) { // Remove = false
 
     products = sortProductsByName(products);
     Storage.saveProducts(products);
+    searchInput.value = "";
     render(products);
 }
 
 function deleteProduct(id) {
     products = products.filter(p => p.id !== id);
     Storage.saveProducts(products);
+    searchInput.value = "";
     render(products);
 }
 
