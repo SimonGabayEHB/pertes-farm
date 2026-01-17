@@ -73,11 +73,14 @@ header #mode-toggle-button {
   gap: 5px;
   white-space: nowrap;
   align-self: center;
+  min-width: 120px;
 }
 
 header #mode-toggle-button span:last-child {
   display: inline-block;
   margin-top: 6px;
+  flex: 1;
+  text-align: left;
 }
 
 #mode-lock-icon {
