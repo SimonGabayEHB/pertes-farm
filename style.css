@@ -50,7 +50,7 @@ header img {
   grid-column: 1;
   grid-row: 1;
   width: 7em;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 header h1 {
@@ -114,7 +114,7 @@ header #mode-toggle-button span:last-child {
     grid-row: 1;
     justify-self: end;
     font-size: 0.85rem;
-    min-width: 120px;
+    min-width: 100px;
   }
 
   header #mode-toggle-button span:last-child {
@@ -148,7 +148,7 @@ header #mode-toggle-button span:last-child {
   font-size: 1.2rem;
   padding: 10px;
   width: 37%; 
-  min-width: 200px; 
+  min-width: 300px; 
   max-width: 400px; 
   margin: 0;
 
