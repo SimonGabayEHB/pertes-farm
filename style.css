@@ -545,13 +545,14 @@ header #mode-toggle-button span:last-child {
 /* ----------------------------
    TOAST NOTIFICATION
 ---------------------------- */
+/* Toast - positioned inside overlay */
 #toast {
-  position: fixed;
-  top: 10dvh; /* Position 10% from top of VISIBLE viewport */
+  position: absolute; /* Changed from fixed */
+  top: -60px; /* Above the overlay */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(20px);
   
-  padding: 16px 24px;
+  padding: 12px 20px;
   background-color: white;
   color: black;
   border-radius: 12px;
@@ -561,21 +562,17 @@ header #mode-toggle-button span:last-child {
   align-items: center;
   gap: 10px;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  text-align: center;
-  z-index: 2000;
+  z-index: 2001;
   
-  opacity: 0; /* Start invisible */
-  transition: opacity 0.3s ease; /* Fade instead of slide */
-}
-
-#toast svg {
-  flex-shrink: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 #toast.show {
-  opacity: 1; /* Fade in */
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Slides up into view */
 }
 
 /* Input error styling */
