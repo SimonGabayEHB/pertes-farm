@@ -544,8 +544,7 @@ header #mode-toggle-button span:last-child {
 /* Toast */
 #toast {
   position: absolute; 
-  width: fit-content;
-  top: -65px; /* Above the overlay */
+  top: -70px; /* Above the overlay */
   left: 50%;
   transform: translateX(-50%) translateY(20px);
   
@@ -564,6 +563,7 @@ header #mode-toggle-button span:last-child {
   z-index: -1;
   
   opacity: 0;
+  white-space: nowrap;
   transition: all 0.3s ease;
 }
 
