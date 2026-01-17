@@ -398,7 +398,7 @@ function editProduct(id, name, barcode) { // Remove = false
     if (index === -1) return;
 
     // Always update both since we're always passing both from saveBtn
-    products[index].name = name.toUpperCase;
+    products[index].name = name.toUpperCase();
     products[index].searchName = name.toLowerCase();
     products[index].barcode = barcode;
 
