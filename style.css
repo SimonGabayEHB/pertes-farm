@@ -128,6 +128,9 @@ header #mode-toggle-button span:last-child {
 /* ----------------------------
    Search-bar
 ---------------------------- */
+/* ----------------------------
+   Search-bar
+---------------------------- */
 #search-input {
   font-size: 1.2rem;
   padding: 10px;
@@ -136,6 +139,11 @@ header #mode-toggle-button span:last-child {
   border: 1px solid #efefef;
   border-radius: 8px;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  
+  position: sticky;
+  top: 0;
+  background-color: rgb(230, 229, 229); 
+  z-index: 10; 
 }
 
 #search-input:focus {
