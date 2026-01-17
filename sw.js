@@ -1,7 +1,7 @@
 // SW.js - service worker
 
 // 1. Name of the cache
-const CACHE_NAME = "pertes-v3.4";
+const CACHE_NAME = "pertes-v3.5";
 
 // 2. List of files to cache
 const ASSETS = [
