@@ -281,6 +281,11 @@ saveBtn.addEventListener("click", () => {
     const name = productNameInput.value.trim();
     const barcode = productBarcodeInput.value.trim();
     
+    console.log("=== SAVE BUTTON CLICKED ===");
+    console.log("Mode:", overlayMode);
+    console.log("Barcode entered:", barcode, "Type:", typeof barcode);
+    console.log("All products barcodes:", products.map(p => ({ name: p.name, barcode: p.barcode, type: typeof p.barcode })));
+    
     // Validation - ONLY show toasts for errors
     if (!name) {
         productNameInput.classList.add("error");
@@ -297,11 +302,27 @@ saveBtn.addEventListener("click", () => {
     }
     
     // Check for duplicate barcode when adding
-    if (overlayMode === "add" && products.some(p => p.barcode === barcode)) {
-        productBarcodeInput.classList.add("error");
-        productBarcodeInput.focus();
-        showToast("Ce code-barres existe déjà!");
-        return;
+    if (overlayMode === "add") {
+        const duplicate = products.find(p => p.barcode === barcode);
+        console.log("Checking for duplicate in ADD mode:", duplicate);
+        if (duplicate) {
+            productBarcodeInput.classList.add("error");
+            productBarcodeInput.focus();
+            showToast("Ce code-barres existe déjà!");
+            return;
+        }
+    }
+
+    // Check for duplicate barcode when editing (different product using same barcode)
+    if (overlayMode === "edit") {
+        const duplicate = products.find(p => p.barcode === barcode && p.id !== editingProductId);
+        console.log("Checking for duplicate in EDIT mode:", duplicate);
+        if (duplicate) {
+            productBarcodeInput.classList.add("error");
+            productBarcodeInput.focus();
+            showToast("Ce code-barres est déjà utilisé par " + duplicate.name + "!");
+            return;
+        }
     }
 
     // Success - NO toast, just do the action
