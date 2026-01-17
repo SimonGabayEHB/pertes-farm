@@ -380,7 +380,7 @@ searchInput.addEventListener("input", () => {
 /* HELPER FUNCTIONS */
 function addProduct(name, barcode) {
     const newProduct = {
-        name,
+        name: name.toUpperCase(),
         barcode,
         id: crypto.randomUUID(),
         visible: true,
@@ -398,7 +398,7 @@ function editProduct(id, name, barcode) { // Remove = false
     if (index === -1) return;
 
     // Always update both since we're always passing both from saveBtn
-    products[index].name = name;
+    products[index].name = name.toUpperCase;
     products[index].searchName = name.toLowerCase();
     products[index].barcode = barcode;
 
