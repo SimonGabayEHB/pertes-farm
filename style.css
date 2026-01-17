@@ -131,22 +131,23 @@ header #mode-toggle-button span:last-child {
 .search-container {
   position: sticky;
   top: 0;
-  background-color: rgb(230, 229, 229); /* Match body background */
-  padding: 16px 16px 8px 16px; /* Top, sides, and a bit of bottom */
-  margin-bottom: 8px;
+  background-color: rgb(230, 229, 229);
+  padding: 16px;
   z-index: 10;
 }
 
 #search-input {
   font-size: 1.2rem;
   padding: 10px;
-  width: 100%;
-  margin: 0; /* Remove margin since container handles it */
+  width: calc(100% - 32px); /* Account for container padding */
+  max-width: 600px; /* Limit width on large screens */
+  margin: 0 auto; /* Center it */
+  display: block; /* Make margin auto work */
 
   border: 1px solid #efefef;
   border-radius: 8px;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
-  background-color: white; /* Input itself stays white */
+  background-color: white;
 }
 
 #search-input:focus {
