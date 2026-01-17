@@ -111,6 +111,14 @@ header #mode-toggle-button span:last-child {
     grid-row: 1;
     justify-self: end;
     font-size: 0.85rem;
+    min-width: 120px;
+  }
+
+  header #mode-toggle-button span:last-child {
+    display: inline-block;
+    margin-top: 6px;
+    flex: 1;
+    text-align: left;
   }
   
   header h1 {
