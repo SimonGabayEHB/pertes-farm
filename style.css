@@ -241,7 +241,7 @@ header #mode-toggle-button span:last-child {
   justify-content: center;
 }
 
-.visibility-toggle:hover {
+.visibility-togglehover {
   background: #dff0e6;
 }
 
@@ -307,7 +307,7 @@ header #mode-toggle-button span:last-child {
 /* ----------------------------
    Fullscreen barcode
 ---------------------------- */
-#barcode-back-button {
+#barcode-back-button, #barcode-back-to-research-button {
   padding: 10px 16px;
   margin-bottom: 16px;
 
