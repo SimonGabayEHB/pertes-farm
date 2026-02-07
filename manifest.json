@@ -1,5 +1,6 @@
 {
   "name": "Pertes fruits & légumes",
+  "version": "2.0.0",
   "short_name": "Pertes",
   "start_url": ".",
   "display": "standalone",
