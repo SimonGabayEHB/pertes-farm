@@ -307,7 +307,7 @@ header #mode-toggle-button span:last-child {
 /* ----------------------------
    Fullscreen barcode
 ---------------------------- */
-#barcode-back-button, #barcode-back-to-research-button {
+#barcode-back-button, #search-again-button {
   padding: 10px 16px;
   margin-bottom: 16px;
 
@@ -320,6 +320,15 @@ header #mode-toggle-button span:last-child {
 }
 
 #barcode-back-button:active {
+  background-color: #d8d7d7;
+  transform: translateY(1px);
+}
+
+#search-again-button:hover {
+  background-color: #d8d7d7;
+}
+
+#search-again-button:active {
   background-color: #d8d7d7;
   transform: translateY(1px);
 }

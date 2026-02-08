@@ -9,6 +9,7 @@ const grid = document.getElementById("product-grid");
 const barcodeOverlay = document.getElementById("barcode-overlay")
 const barcodeLarge = document.getElementById("barcode-large");
 const barcodeBackBtn = document.getElementById("barcode-back-button")
+const searchAgainBtn = document.getElementById("search-again-button");
 
 const addBtn = document.getElementById("add-btn");
 const productOverlay = document.getElementById("product-form-overlay");
@@ -341,6 +342,12 @@ addBtn.addEventListener("click", e => openAddOverlay());
 
 barcodeBackBtn.addEventListener("click", e => hideBarcode());
 
+searchAgainBtn.addEventListener("click", () => {
+    hideBarcode();
+    searchInput.value = "";
+    render(products);
+    searchInput.focus();
+})
 
 cancelBtn.addEventListener("click", e => closeProductOverlay());
 
